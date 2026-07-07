@@ -1,22 +1,15 @@
 {
-  "name": "resole",
+  "name": "eliancpastor-sites",
   "private": true,
   "version": "1.0.0",
-  "type": "module",
+  "description": "Monorepo of sites served at eliancpastor.github.io — portfolio hub at the root, each project mounted at a sub-path.",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview",
-    "frames": "node tools/generate-frames.mjs",
-    "frames:preview": "node tools/generate-frames.mjs --preview",
-    "frames:video": "node tools/extract-video-frames.mjs"
-  },
-  "dependencies": {
-    "gsap": "^3.13.0",
-    "lenis": "^1.3.0"
-  },
-  "devDependencies": {
-    "sharp": "^0.34.0",
-    "vite": "^7.0.0"
+    "dev:portfolio": "npm --prefix sites/portfolio run dev",
+    "dev:resole": "npm --prefix sites/resole run dev",
+    "build:portfolio": "npm --prefix sites/portfolio run build",
+    "build:resole": "npm --prefix sites/resole run build",
+    "build": "npm run build:portfolio && npm run build:resole && npm run assemble",
+    "assemble": "rm -rf dist && mkdir -p dist/resole && cp -R sites/portfolio/dist/. dist/ && cp -R sites/resole/dist/. dist/resole/",
+    "deploy": "npx gh-pages -d dist -m 'deploy: portfolio + sites'"
   }
 }
