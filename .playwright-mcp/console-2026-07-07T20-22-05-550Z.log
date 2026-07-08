@@ -1,2 +1,0 @@
-[  204937ms] ReferenceError: initAnatomy is not defined
-    at http://localhost:5199/src/main.js?t=1783455930365:49:1
