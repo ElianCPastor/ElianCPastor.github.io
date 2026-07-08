@@ -1,0 +1,15 @@
+- generic [active] [ref=f8e1]:
+  - banner [ref=f8e2]:
+    - link "AURUM" [ref=f8e3] [cursor=pointer]:
+      - /url: "#top"
+    - navigation "Main" [ref=f8e4]:
+      - link "Commission" [ref=f8e5] [cursor=pointer]:
+        - /url: "#commission"
+  - main [ref=f8e6]:
+    - img "Gold ring with a bezel-set emerald, rotating" [ref=f8e13]
+    - generic [ref=f8e16]:
+      - generic [ref=f8e17]: Cast by hand · set under loupe · polished to mirror ·
+      - generic [ref=f8e18]: Cast by hand · set under loupe · polished to mirror ·
+  - contentinfo [ref=f8e24]:
+    - paragraph [ref=f8e25]: © 2026 AURUM atelier
+    - paragraph [ref=f8e26]: Cast by hand. Worn forever.

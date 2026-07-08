@@ -72,7 +72,9 @@ h1 em, h2 em { font-style: italic; color: var(--gold); }
 
 /* ————— hero ————— */
 .hero {
-  position: relative; height: 100vh;
+  position: relative;
+  height: 100vh;
+  height: 100svh; /* stable on mobile — no URL-bar jump */
   display: flex; flex-direction: column; justify-content: flex-end;
   padding: 0 var(--pad) 12vh;
   overflow: hidden;
@@ -103,7 +105,9 @@ h1 em, h2 em { font-style: italic; color: var(--gold); }
 .object { position: relative; height: 320vh; }
 .object-stage {
   position: sticky; top: 0;
-  height: 100vh; overflow: hidden;
+  height: 100vh;
+  height: 100svh;
+  overflow: hidden;
   display: flex; align-items: center;
   padding: 0 var(--pad);
   background: radial-gradient(ellipse 70% 55% at 68% 50%, rgba(212, 175, 106, 0.09) 0%, transparent 65%);
@@ -217,6 +221,7 @@ h1 em, h2 em { font-style: italic; color: var(--gold); }
 /* ————— commission ————— */
 .commission {
   min-height: 88vh;
+  min-height: 88svh;
   display: flex; flex-direction: column; align-items: center; justify-content: center;
   gap: 1.8rem; text-align: center;
   padding: 14vh var(--pad);
@@ -249,8 +254,8 @@ h1 em, h2 em { font-style: italic; color: var(--gold); }
 @media (max-width: 860px) {
   .top nav a:not(.pill) { display: none; }
   .object { height: 260vh; }
-  .object-ring { right: 50%; translate: 50% -50%; top: 30%; width: min(36vh, 74vw); opacity: 0.9; }
-  .object-copy { margin-top: 46vh; }
+  .object-ring { right: 50%; translate: 50% -50%; top: 28%; width: min(46vh, 96vw); }
+  .object-copy { margin-top: 44vh; }
   .atelier { grid-template-columns: 1fr; }
 }
 

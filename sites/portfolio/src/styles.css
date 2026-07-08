@@ -55,6 +55,7 @@ a:focus-visible { outline: 2px dashed var(--gold); outline-offset: 4px; }
 .hero {
   position: relative;
   height: 100vh;
+  height: 100svh; /* stable on mobile — no URL-bar jump */
   display: flex; flex-direction: column; justify-content: flex-end;
   padding: 0 var(--pad) 16vh;
   overflow: hidden;
