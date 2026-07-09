@@ -7,11 +7,13 @@
     "dev:portfolio": "npm --prefix sites/portfolio run dev",
     "dev:resole": "npm --prefix sites/resole run dev",
     "dev:aurum": "npm --prefix sites/aurum run dev",
+    "dev:marea": "npm --prefix sites/marea run dev",
     "build:portfolio": "npm --prefix sites/portfolio run build",
     "build:resole": "npm --prefix sites/resole run build",
     "build:aurum": "npm --prefix sites/aurum run build",
-    "build": "npm run build:portfolio && npm run build:resole && npm run build:aurum && npm run assemble",
-    "assemble": "rm -rf dist && mkdir -p dist/resole dist/aurum && cp -R sites/portfolio/dist/. dist/ && cp -R sites/resole/dist/. dist/resole/ && cp -R sites/aurum/dist/. dist/aurum/",
+    "build:marea": "npm --prefix sites/marea run build",
+    "build": "npm run build:portfolio && npm run build:resole && npm run build:aurum && npm run build:marea && npm run assemble",
+    "assemble": "rm -rf dist && mkdir -p dist/resole dist/aurum dist/marea && cp -R sites/portfolio/dist/. dist/ && cp -R sites/resole/dist/. dist/resole/ && cp -R sites/aurum/dist/. dist/aurum/ && cp -R sites/marea/dist/. dist/marea/ && find dist sites/*/dist -name '* 2*' -prune -exec rm -rf {} + 2>/dev/null; true",
     "deploy": "npx gh-pages -d dist -m 'deploy: portfolio + sites'"
   }
 }
